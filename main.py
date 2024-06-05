@@ -12,9 +12,9 @@ for mes in lista_meses:
     if (tabela_vendas['Vendas'] > 55000).any():
         vendedor = tabela_vendas.loc[tabela_vendas['Vendas'] > 55000, 'Vendedor'].values[0]
         vendas = tabela_vendas.loc[tabela_vendas['Vendas'] > 55000, 'Vendas'].values[0]
-        print(f' No mês {mes} alguém bateu a meta.Vendedor: {vendedor}, Vendas: {vendas}')
+        print(f'No mês de {mes} alguém bateu a meta. \nVendedor: {vendedor}, \nVendas: {vendas}')
         message = client.messages.create(
             from_ ='+16365946177',
-            body = f' No mês {mes} alguém bateu a meta.Vendedor: {vendedor}, Vendas: {vendas}',
-            to = '+5513991038324')
+            body = f'\nNo mês de {mes} alguém bateu a meta. \nVendedor: {vendedor}, \nVendas: {vendas}',
+            to = '+55013991038324')
         print(message.sid)
